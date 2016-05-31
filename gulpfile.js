@@ -9,6 +9,7 @@ var gutil = require('gulp-util');
 var watchify = require("watchify");
 var sass = require("gulp-sass");
 var uglyCss = require("gulp-uglifycss");
+var pug = require("gulp-pug");
 
 var paths = {
     ts_libs: 'src/ts/libs.ts',
