@@ -1,4 +1,5 @@
-
+//Override Bootstrap variables before import.  For a list of variables see:
+//https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss
 $link-color: red;
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap";
 

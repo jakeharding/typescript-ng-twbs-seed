@@ -83,6 +83,7 @@ gulp.task("build_styles",  function () {
 
 gulp.task("watch", function () {
     gulp.watch(paths.scss_file, ["build_styles"]);
+    gulp.watch(paths.pug_fls, ["build_html"]);
 })
 
 gulp.task("build_app", bundleApp);
@@ -92,4 +93,4 @@ watched.on("log", gutil.log);
 
 gulp.task('init', ['build_js_libs', 'build_app', "build_styles"]);
 
-gulp.task('default', ['build_app', "build_styles", "watch"]);
+gulp.task('default', ['build_app', "build_styles", "build_html", "watch"]);

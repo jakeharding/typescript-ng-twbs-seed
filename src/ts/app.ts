@@ -1,4 +1,4 @@
-/// <reference path="../typings/index.d.ts" />
+/// <reference path="../../typings/index.d.ts" />
 module FunApp {
     'use strict';
     var fun_app = angular.module('app', [
@@ -7,13 +7,14 @@ module FunApp {
     ]).config(function() {
         console.info("Module loaded");
     }).config(['$stateProvider', function($stateProvider) {
-        // $stateProvider.state('', {
-        //     template: '<h1>Hello Root State<h1>'
-        // })
-        $stateProvider.state('list', {
-            url: 'pokemon/',
-            template:'<h1>Hello World of Pokemon</h1>',
+        $stateProvider.state('root', {
+            url: '',
             
+        })
+        
+        $stateProvider.state('list', {
+            url: 'list/',
+            templateUrl:'partials/list.html',
         })
     }])
 } 
