@@ -4,5 +4,6 @@ Contains gulp tasks to get started with Angular 1.x in Typescript and Twitter Bo
 
 TODO:
 Add pug html templating
+
 Organize gulp tasks in own modules
  
