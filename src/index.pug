@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    title Hello World!
+    link(rel='stylesheet', href='css/styles.css')
+
+  body.container(ng-app='app')
+    ui-view.col-sm-12
+      a(ui-sref='list') Pokemon
+    script(src='js/libs.js')
+    script(src='js/app.js')

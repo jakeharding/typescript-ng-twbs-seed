@@ -16,8 +16,23 @@ var paths = {
     ts_app: 'src/ts/app.ts',
     js_dest: 'dist/js',
     scss_file: "src/scss/styles.scss",
-    css_dest: "dist/css"
+    css_dest: "dist/css",
+    pug_fls: ["src/pug/*", "src/pug/**/*"],
+    index_fl: "src/index.pug",
+    html_dest: "dist/partials",
 }
+
+gulp.task("build_index", function () {
+    gulp.src(paths.index_fl)
+        .pipe(pug())
+        .pipe(gulp.dest("dist"))
+})
+
+gulp.task("build_html", ["build_index"], function () {
+    gulp.src(paths.pug_fls)
+        .pipe(pug())
+        .pipe(gulp.dest(paths.html_dest))
+})
 
 gulp.task("build_js_libs", function () {
     return browserify({
